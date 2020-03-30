@@ -16,6 +16,6 @@
 // });
 
 import { AppRegistry } from "react-native";
-import App from "./screen/home/index";
+import App from "./screen_/home/index";
 
 AppRegistry.registerComponent("ReactNavigationExample", () => App);

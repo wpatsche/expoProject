@@ -7,13 +7,14 @@ import {
   TouchableOpacity
 } from "react-native";
 
+import Routes from "../../src/routes/routes";
 import Header from "./components/Header";
 import Body from "./components/Body";
 import styles from "./style/index";
 
-export default function App() {
+const Home = ({ navigation }) => (
   <>
-    <Header title="e-Rural" />
+    {/* <Header title="e-Rural" /> */}
     <Body />
     <View style={styles.viewfoot}>
       <TextInput
@@ -41,8 +42,14 @@ export default function App() {
         color={"#61ce70"}
         style={styles.btn}
         title="Fazer Login"
-        onPress={() => this.props.navigation.navigate("Main")}
+        onPress={() => Routes.navigate("Main")}
       />
     </View>
-  </>;
-}
+  </>
+);
+
+Home.navigationOptions = {
+  title: "e-Rural"
+};
+
+export default Home;
